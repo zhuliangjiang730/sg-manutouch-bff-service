@@ -65,7 +65,6 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest req) {
-        // 这里直接返回校验成功，后续可以接入真实认证逻辑
         LoginResponse resp = new LoginResponse(true, "Authentication successful");
         return ResponseEntity.ok(resp);
     }
